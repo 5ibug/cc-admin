@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cc</artifactId>
+        <groupId>net.kegui</groupId>
+        <version>3.3.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cc-api</artifactId>
+    <packaging>pom</packaging>
+
+    <description>远程API适配</description>
+
+    <modules>
+        <module>cc-api-system</module>
+        <module>cc-api-job</module>
+        <module>cc-api-dfs</module>
+        <module>cc-api-gen</module>
+        <module>cc-api-auth</module>
+    </modules>
+
+    <dependencies>
+
+        <!--feign 注解依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--openfeign-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-openfeign</artifactId>
+        </dependency>
+
+        <!--twelvet通用核心-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-core</artifactId>
+        </dependency>
+
+        <!--Swagger-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-swagger</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

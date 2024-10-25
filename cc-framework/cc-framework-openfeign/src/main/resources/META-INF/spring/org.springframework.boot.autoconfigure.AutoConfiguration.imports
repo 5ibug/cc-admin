@@ -1,0 +1,2 @@
+net.kegui.framework.openfeign.TwFeignAutoConfiguration
+net.kegui.framework.openfeign.sentinel.SentinelAutoConfiguration

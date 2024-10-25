@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cc-server</artifactId>
+        <groupId>net.kegui</groupId>
+        <version>3.3.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cc-server-gen</artifactId>
+    <description>代码生成</description>
+
+    <dependencies>
+
+        <!-- Gen -->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-api-gen</artifactId>
+        </dependency>
+
+        <!-- Apache Velocity -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+        </dependency>
+
+        <!--默认采用多数据-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-datasource</artifactId>
+        </dependency>
+
+        <!-- jdbc -->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-jdbc</artifactId>
+        </dependency>
+
+        <!-- 安全模块 -->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-security</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

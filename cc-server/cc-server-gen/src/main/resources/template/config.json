@@ -1,0 +1,12 @@
+{
+  "project": {
+    "packageName": "net.kegui",
+    "version": "3.0.0",
+    "backendPath": "cc",
+    "frontendPath": "cc-ui"
+  },
+  "developer": {
+    "author": "cc",
+    "email": "admin@5ibug.net"
+  }
+}

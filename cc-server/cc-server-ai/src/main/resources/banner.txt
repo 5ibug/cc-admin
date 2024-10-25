@@ -1,0 +1,5 @@
+${AnsiColor.BRIGHT_YELLOW}
+CC-AI 启动成功
+
+${AnsiColor.GREEN} :: ${spring.application.name} :: ${AnsiColor.BRIGHT_WHITE} ${cc.version}
+${AnsiColor.GREEN} :: Spring Boot :: ${AnsiColor.BRIGHT_WHITE} ${spring-boot.version}

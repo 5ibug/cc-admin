@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cc-server</artifactId>
+        <groupId>net.kegui</groupId>
+        <version>3.3.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cc-server-system</artifactId>
+    <description>系统核心服务</description>
+
+    <dependencies>
+
+        <!-- Api System-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-api-system</artifactId>
+        </dependency>
+
+        <!--Redis缓存-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-redis</artifactId>
+        </dependency>
+
+        <!--文件服务-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-api-dfs</artifactId>
+        </dependency>
+
+        <!-- 数据权限 -->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-datascope</artifactId>
+        </dependency>
+
+        <!--默认采用多数据-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-datasource</artifactId>
+        </dependency>
+
+        <!-- jdbc -->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-jdbc</artifactId>
+        </dependency>
+
+        <!-- 安全模块 -->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-security</artifactId>
+        </dependency>
+
+        <!--Auth API-->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-api-auth</artifactId>
+        </dependency>
+
+        <!--XSS-->
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-xss</artifactId>
+        </dependency>
+
+        <!--幂等-->
+        <dependency>
+            <groupId>com.pig4cloud.plugin</groupId>
+            <artifactId>idempotent-spring-boot-starter</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

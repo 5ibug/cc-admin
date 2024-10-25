@@ -1,0 +1,2 @@
+net.kegui.framework.log.LogAutoConfiguration
+net.kegui.framework.log.filter.WebLogFilter

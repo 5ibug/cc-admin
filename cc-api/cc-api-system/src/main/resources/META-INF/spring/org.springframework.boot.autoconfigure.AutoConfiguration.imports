@@ -1,0 +1,3 @@
+net.kegui.api.system.feign.factory.RemoteLogFallbackFactory
+net.kegui.api.system.feign.factory.RemoteOauth2ClientDetailsFallbackFactory
+net.kegui.api.system.feign.factory.RemoteUserFallbackFactory

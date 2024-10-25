@@ -1,0 +1,6 @@
+net.kegui.framework.security.service.impl.TwTUserDetailsServiceImpl
+net.kegui.framework.security.service.impl.TwTSmsDetailsServiceImpl
+net.kegui.framework.security.service.impl.TWTRedisOAuth2AuthorizationService
+net.kegui.framework.security.service.impl.TWTRedisOAuth2AuthorizationConsentService
+net.kegui.framework.security.service.impl.TWTRemoteRegisteredClientRepository
+net.kegui.framework.security.aspect.TWTSecurityInnerAspect
