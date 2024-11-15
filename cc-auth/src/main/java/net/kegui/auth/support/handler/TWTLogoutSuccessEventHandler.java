@@ -34,7 +34,7 @@ public class TWTLogoutSuccessEventHandler implements ApplicationListener<LogoutS
 		}
 	}
 
-		/**
+	/**
 	 * 处理退出成功方法
 	 * <p>
 	 * 获取到登录的authentication 对象

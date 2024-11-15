@@ -1,6 +1,5 @@
 package net.kegui.server.ai.function;
 
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import lombok.Data;
@@ -17,23 +16,21 @@ import java.util.function.Function;
 @Service
 public class EditUserNameFunction implements Function<EditUserNameFunction.Request, EditUserNameFunction.Response> {
 
+	@Data
+	public static class Request {
 
+		@JsonProperty(required = true, value = "newName")
+		@JsonPropertyDescription(value = "newName")
+		String newName;
 
-    @Data
-    public static class Request {
-        @JsonProperty(required = true, value = "newName")
-        @JsonPropertyDescription(value = "newName")
-        String newName;
-    }
+	}
 
-    public record Response(String message) {
-    }
+	public record Response(String message) {
+	}
 
-
-
-    @Override
-    public Response apply(Request request) {
-        return new Response("{\"name\": \"" + request.newName + "\"}");
-    }
+	@Override
+	public Response apply(Request request) {
+		return new Response("{\"name\": \"" + request.newName + "\"}");
+	}
 
 }

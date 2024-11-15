@@ -24,31 +24,34 @@ import java.util.concurrent.ConcurrentHashMap;
 @RestController
 @RequestMapping("/index")
 public class IndexController {
-    @Autowired
-    private NacosDiscoveryProperties discoveryProperties;
 
-    @Value("${cc.version}")
-    private String version;
+	@Autowired
+	private NacosDiscoveryProperties discoveryProperties;
 
-    @GetMapping("info")
-    public JsonResult<Map> info() throws NacosException {
-        Map map = new HashMap();
-        NamingService namingService = discoveryProperties.namingServiceInstance();
-        Map<String, Integer> serviceCountMap = new ConcurrentHashMap<>();
-        int pageSize = 10;
-        int pageNo = 1;
-        ListView<String> services;
-        do {
-            services = namingService.getServicesOfServer(pageNo++, pageSize);
-            for (String service : services.getData()) {
-                List<Instance> instances = namingService.selectInstances(service, true);
-                serviceCountMap.put(service, instances.size());
-            }
-        } while (services.getCount() == pageSize);
-        map.put("service",serviceCountMap);
-        map.put("version",version);
-        map.put("springVersion",org.springframework.boot.SpringBootVersion.getVersion());
-        // 服务列表和数量
-        return JsonResult.success(map);
-    }
+	@Value("${cc.version}")
+	private String version;
+
+	@GetMapping("info")
+	public JsonResult<Map> info() throws NacosException {
+		Map map = new HashMap();
+		NamingService namingService = discoveryProperties.namingServiceInstance();
+		Map<String, Integer> serviceCountMap = new ConcurrentHashMap<>();
+		int pageSize = 10;
+		int pageNo = 1;
+		ListView<String> services;
+		do {
+			services = namingService.getServicesOfServer(pageNo++, pageSize);
+			for (String service : services.getData()) {
+				List<Instance> instances = namingService.selectInstances(service, true);
+				serviceCountMap.put(service, instances.size());
+			}
+		}
+		while (services.getCount() == pageSize);
+		map.put("service", serviceCountMap);
+		map.put("version", version);
+		map.put("springVersion", org.springframework.boot.SpringBootVersion.getVersion());
+		// 服务列表和数量
+		return JsonResult.success(map);
+	}
+
 }
