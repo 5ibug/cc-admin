@@ -4,10 +4,13 @@ package net.kegui.server.ai.function;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import lombok.Data;
+import net.kegui.server.ai.entity.MessageEntity;
 import org.springframework.context.annotation.Description;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Function;
 
 @Description("edit username")
@@ -30,11 +33,7 @@ public class EditUserNameFunction implements Function<EditUserNameFunction.Reque
 
     @Override
     public Response apply(Request request) {
-        return new Response(String.format("""
-                 {
-                            "action": "editUser",
-                            "parameter": %s
-                        }""",request.newName));
+        return new Response("{\"name\": \"" + request.newName + "\"}");
     }
 
 }

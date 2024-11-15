@@ -1,13 +1,11 @@
 package net.kegui.server.gen.utils;
 
-import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import cn.hutool.core.util.StrUtil;
-import com.baomidou.dynamic.datasource.toolkit.DynamicDataSourceContextHolder;
 import net.kegui.api.gen.domain.GenDatasourceConf;
 import net.kegui.api.gen.domain.GenFieldType;
 import net.kegui.api.gen.domain.GenTable;
@@ -21,7 +19,6 @@ import net.kegui.api.gen.constant.GenConstants;
 import net.kegui.server.gen.mapper.GenDatasourceConfMapper;
 import net.kegui.server.gen.mapper.GenFieldTypeMapper;
 import net.kegui.server.gen.mapper.GenMapper;
-import net.kegui.server.gen.mapper.GenTableMapper;
 import org.apache.commons.lang3.RegExUtils;
 import org.springframework.context.ApplicationContext;
 

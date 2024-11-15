@@ -1,13 +1,11 @@
 package net.kegui.server.gen.controller;
 
 import cn.hutool.core.util.StrUtil;
-import com.baomidou.dynamic.datasource.toolkit.DynamicDataSourceContextHolder;
 import net.kegui.api.gen.domain.*;
 import net.kegui.framework.core.application.controller.TWTController;
 import net.kegui.framework.core.application.domain.AjaxResult;
 import net.kegui.framework.core.application.domain.JsonResult;
 import net.kegui.framework.core.application.page.TableDataInfo;
-import net.kegui.framework.datasource.support.DataSourceConstants;
 import net.kegui.framework.jdbc.web.utils.PageUtils;
 import net.kegui.framework.log.annotation.Log;
 import net.kegui.framework.log.enums.BusinessType;
